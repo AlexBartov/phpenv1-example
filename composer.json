@@ -1,18 +1,23 @@
 {
-    "name": "sitepoint/guestbook",
-    "description": "A guestbook app",
-    "type": "project",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Alex Bartov",
-            "email": "bartov.alexei@gmail.com"
-        }
-    ],
-    "require": {
-        "catfan/medoo": "^1.0"
-    },
-    "require-dev": {
-        "symfony/var-dumper": "^3.0"
+  "name": "sitepoint/guestbook",
+  "description": "A guestbook app",
+  "type": "project",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "SitePoint\\": "src"
     }
+  },
+  "authors": [
+    {
+      "name": "Alex Bartov",
+      "email": "bartov.alexei@gmail.com"
+    }
+  ],
+  "require": {
+    "catfan/medoo": "^1.0"
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^3.0"
+  }
 }
