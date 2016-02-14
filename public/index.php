@@ -1,15 +1,19 @@
 <?php
 require_once '../vendor/autoload.php';
+$file = '../storage/database.db';
+if (is_writable('../storage/database.local.db')) {
+    $file = '../storage/database.local.db';
+}
 $database = new medoo([
     'database_type' => 'sqlite',
-    'database_file' => '../storage/database.db'
+    'database_file' => $file
 ]);
 $comment = new SitePoint\Comment($database);
 $comment->setEmail('Steve@smith.lol')
-->setName('Steve Smith')
+    ->setName('Steve Smith')
 //->setComment('It works!')
-->setComment('Yey! Saving comments works!')
-->save();
+    ->setComment('Yey! Saving comments works!')
+    ->save();
 ?>
 <!doctype html>
 <html class="no-js" lang="">
